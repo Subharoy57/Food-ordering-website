@@ -1,0 +1,150 @@
+.navbar {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  width: 150px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+}
+
+.navbar-menu a,
+.navbar-menu li {
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit parent color */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.navbar-menu a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar button {
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #fff4f2;
+}
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
+
+.navbar-profile {
+  position: relative; /* Sets the positioning context for the dropdown menu */
+}
+
+.nav-profile-dropdown {
+  position: absolute; /* Removes the dropdown from the normal document flow */
+  display: none; /* Initially hides the dropdown */
+  right: 0; /* Positions the dropdown to the right */
+  z-index: 1; /* Ensures the dropdown appears above other content */
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex; /* Displays the dropdown when hovering over .navbar-profile */
+  flex-direction: column; /* Sets the dropdown items to be stacked vertically */
+  gap: 10px; /* Adds space between each item in the dropdown */
+  background-color: #fff2ef; /* Sets the background color of the dropdown */
+  padding: 12px 25px; /* Adds padding inside the dropdown */
+  border-radius: 4px; /* Adds rounded corners to the dropdown */
+  border: 1px solid tomato; /* Adds a border around the dropdown */
+  outline: 2px solid white; /* Adds an outline around the dropdown */
+  list-style: none; /* Removes default list styling */
+}
+
+.nav-profile-dropdown li {
+  display: flex; /* Displays the list items as flex items */
+  align-items: center; /* Aligns the items vertically centered */
+  gap: 10px; /* Adds space between the items */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the items */
+}
+
+.nav-profile-dropdown img {
+  width: 20px; /* Sets the width of images within the dropdown */
+}
+
+
+.nav-profile-dropdown li:hover {
+  color: tomato; /* Changes the text color of list items to tomato when hovered over */
+}
+
+
+@media (max-width:1050px) {
+  .navbar .logo {
+    width: 140px;
+  }
+  .navbar-menu {
+    gap: 20px;
+    font-size: 17px;
+  }
+  .navbar-right {
+    gap: 30px;
+  }
+  .navbar-right img {
+    width: 22px;
+  }
+  .navbar-right button {
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width:900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+  .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+  .navbar-right {
+    gap: 20px;
+  }
+  .navbar-right img {
+    width: 20px;
+  }
+  .navbar-right button {
+    padding: 8px 25px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width:750px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+
